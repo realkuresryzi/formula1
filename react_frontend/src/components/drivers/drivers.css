@@ -1,0 +1,76 @@
+@import '../../utils/styles.css';
+
+.driver__cards-list__large-padding {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20rem;
+    transition: .5s;
+}
+
+.driver__cards-list__small-padding {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10rem;
+  transition: .5s;
+}
+
+.driver__card-area {
+    display: block;
+    width: 100%;
+    height: 8rem;
+    text-decoration: none;
+}
+
+.driver__add-button {
+  height: 4rem;
+  width: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--white);
+  border: none;
+  border-radius: 1rem;
+  font-size: 2.5rem;
+  box-shadow: 0 0 .5rem rgb(197, 197, 197);
+}
+
+.driver__add-button:hover {
+  cursor: pointer;
+}
+
+.driver__dialog {
+  width: 45rem;
+  display: grid; 
+  grid-template-columns: 5fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0.5em 1em; 
+  grid-template-areas: 
+    "name x"
+    "surname x"
+    "nationality submit-button"; 
+}
+
+.driver__name-input-field { grid-area: name; }
+.driver__surname-input-field { grid-area: surname; }
+.driver__nationality-input-field { grid-area: nationality; }
+
+.driver__input-field {
+  height: 1.5rem;
+  padding: .5rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--white);
+}
+
+.driver__submit-button { 
+  grid-area: submit-button;
+  height: 90%; 
+  font-size: larger;
+  background-color: var(--secondary);
+  border: solid;
+}
+
+.driver__submit-button:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,70 @@
+---
+version: '3'
+services:
+  race:
+    image: pa165-formula-one-team-race
+    ports:
+      - "8081:8081"
+    build: ./race
+    expose:
+      - "8081"
+  car:
+    image: pa165-formula-one-team-car
+    ports:
+      - "8082:8082"
+    build: ./car
+    expose:
+      - "8082"
+  driver:
+    image: pa165-formula-one-team-driver
+    ports:
+      - "8083:8083"
+    build: ./driver
+    expose:
+      - "8083"
+  component:
+    image: pa165-formula-one-team-component
+    ports:
+      - "8084:8084"
+    build: ./component
+    expose:
+      - "8084"
+  authentication:
+    image: pa165-formula-one-team-authentication
+    ports:
+      - "8080:8080"
+    build: ./authentication
+    expose:
+      - "8080"
+
+  prometheus:
+    image: prom/prometheus
+    container_name: f1-prometheus-container
+    ports:
+      - "9090:9090"
+    expose:
+      - "9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:Z
+    depends_on:
+      - race
+      - car
+      - driver
+      - component
+
+  grafana:
+    image: grafana/grafana
+    container_name: f1-grafana-container
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    volumes:
+      - ./grafana/datasources:/etc/grafana/provisioning/datasources
+      - ./grafana/dashboards:/var/lib/grafana/dashboards/
+      - ./grafana/dashboards.yml:/etc/grafana/provisioning/dashboards/dashboards.yml
+    depends_on:
+      - prometheus
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin

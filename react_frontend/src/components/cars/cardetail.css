@@ -1,0 +1,121 @@
+@import '../../utils/styles.css';
+
+.driver-detail__container {
+    margin-left: 20rem;
+}
+
+.cd__container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.cd__upper-block {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    width: 45rem;
+    height: 9.5rem;
+}
+
+.cd__name-main-driver {
+    background-color: var(--white);
+    box-shadow: 0 0 .5rem rgb(197, 197, 197);
+    border-radius: 1rem;
+    width: 39.5rem;
+    margin-right: 1.5rem;
+    padding-left: 2rem;
+    padding-top: .5rem;
+}
+
+.cd__text {
+    margin: 0;
+    margin-left: 1.5rem;
+    padding: 2rem;
+    padding-right: 4rem;
+    width: 20rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 0 .5rem rgb(197, 197, 197);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cd__pic {
+    width: 25rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 .5rem rgb(197, 197, 197);
+}
+
+
+.cd__lower-block {
+    display: flex;
+    flex-direction: row;
+    width: 45rem;
+}
+
+
+.cd__buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.cd__button {
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--white);
+    border: none;
+    border-radius: 1rem;
+    font-size: 2.5rem;
+    box-shadow: 0 0 .5rem rgb(197, 197, 197);
+}
+
+.cd__button:hover .cd__edit-button {
+    color: rgb(142, 134, 47);
+}
+
+.cd__button:hover .cd__delete-button {
+    color: var(--primary);
+}
+
+.cd__button:hover {
+    cursor: pointer;
+}
+
+.cd__button-size {
+    height: 1.7rem;
+    width: 1.7rem;
+}
+
+.cd__outer-edit {
+    margin-bottom: .65rem;
+    margin-top: .1rem;
+}
+
+.cd__outer-delete {
+    margin-top: .65rem;
+}
+
+.cd__drivers-block {
+    width: 21.75rem;
+    min-height: 10rem;
+    margin-right: .75rem;
+    padding-bottom: 1.5rem;
+
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 0 .5rem rgb(197, 197, 197);
+}
+
+.cd__components-block {
+    width: 21.75rem;
+    min-height: 10rem;
+    margin-left: .75rem;
+    padding-bottom: 1.5rem;
+
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 0 .5rem rgb(197, 197, 197);
+}

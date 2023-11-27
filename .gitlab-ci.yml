@@ -1,0 +1,35 @@
+image: maven:3.8.5-openjdk-17-slim
+
+stages:
+  - build
+  - test
+  - checkstyle
+  - cleaninstall
+
+build:
+  stage: build
+  script:
+    - mvn compile
+  tags:
+    - shared-fi
+
+
+test:
+  stage: test
+  script:
+    - mvn clean test
+  tags:
+    - shared-fi
+
+checkstyle:
+  stage: checkstyle
+  script: mvn checkstyle:check
+  tags:
+    - shared-fi
+
+
+cleaninstall:
+  stage: cleaninstall
+  script: mvn clean install
+  tags:
+    - shared-fi

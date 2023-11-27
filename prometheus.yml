@@ -1,0 +1,31 @@
+global:
+  scrape_interval: 3s
+
+scrape_configs:
+  - job_name: 'module-car'
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['car:8082']
+        labels:
+          application: 'module-car'
+
+  - job_name: 'module-component'
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['component:8084']
+        labels:
+          application: 'module-component'
+
+  - job_name: 'module-driver'
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['driver:8083']
+        labels:
+          application: 'module-driver'
+
+  - job_name: 'module-race'
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['race:8081']
+        labels:
+          application: 'module-race'

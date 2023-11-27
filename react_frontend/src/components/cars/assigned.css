@@ -1,0 +1,14 @@
+@import '../../utils/styles.css';
+
+.assigned__name {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+.assigned__icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+    margin-bottom: -.6rem;
+}

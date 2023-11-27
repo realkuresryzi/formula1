@@ -1,0 +1,54 @@
+@import '../../utils/styles.css';
+
+.nav-bar-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: center;
+    height: 100%;
+    width: 16rem;
+    background-color: var(--primary);
+    list-style: none;
+    margin: 0 1rem 0 0;
+    padding: 0;
+    box-shadow: 0 0 2rem rgb(94, 94, 94);
+    position: fixed;
+    top: 0;
+}
+
+.nav-bar-list__item {
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.nav-bar-list__item--menu {
+    height: 5rem;
+    padding-left: .3rem;
+    color: var(--black);
+    border: none;
+    background-color: transparent;
+}
+
+.logo-size {
+    width: 30%;
+    padding: 3rem 5.7rem;
+}
+
+.link-text {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.nav-bar-list__item--menu:hover .link-text {
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.current-link {
+    color: var(--secondary);
+}
+
+
+@media only screen and (max-width: 28rem) {
+
+}

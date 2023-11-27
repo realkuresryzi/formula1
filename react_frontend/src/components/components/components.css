@@ -1,0 +1,78 @@
+@import '../../utils/styles.css';
+
+.component__cards-list__large-padding {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 23rem;
+    transition: .5s;
+}
+
+.component__cards-list__small-padding {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10rem;
+  transition: .5s;
+}
+
+.component__card-area {
+    display: block;
+    width: 100%;
+    height: 8rem;
+    text-decoration: none;
+}
+
+.component__add-button {
+  height: 4rem;
+  width: 4rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--white);
+  border: none;
+  border-radius: 1rem;
+  font-size: 2.5rem;
+  box-shadow: 0 0 .5rem rgb(197, 197, 197);
+}
+
+.component__add-button:hover {
+  cursor: pointer;
+}
+
+.component__dialog {
+  width: 45rem;
+  display: grid; 
+  grid-template-columns: 5fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0.5em 1em; 
+  grid-template-areas: 
+    "one x"
+    "two x"
+    "three x"
+    "four submit-button"; 
+}
+
+.component__name-input-field { grid-area: one; }
+.component__weight-input-field { grid-area: two; }
+.component__price-input-field { grid-area: three; }
+.component__manu-input-field { grid-area: four; }
+
+.component__input-field {
+  height: 1.5rem;
+  padding: .5rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--white);
+}
+
+.component__submit-button { 
+  grid-area: submit-button;
+  height: 100%; 
+  font-size: larger;
+  background-color: var(--secondary);
+  border-width: 0.1rem;
+  border: solid;
+}
+
+.component__submit-button:hover {
+  cursor: pointer;
+}

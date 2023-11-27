@@ -1,0 +1,123 @@
+.driver-detail__container {
+    margin-left: 20rem;
+}
+
+.dd__container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.dd__upper-block {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.dd__text {
+    margin: 0;
+    margin-left: 1.5rem;
+    padding: 2rem;
+    padding-right: 4rem;
+    width: 20rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 0 .5rem rgb(197, 197, 197);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dd__pic {
+    width: 25rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 .5rem rgb(197, 197, 197);
+}
+
+.dd__name {
+    font-size: 4rem;
+}
+
+.dd__surname {
+    font-size: 4rem;
+}
+
+.dd__nat {
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.dd__characteristic {
+    display: flex;
+    flex-direction: row;
+}
+
+.dd__char-point {
+    margin-top: .3rem;
+    margin-left: .4rem;
+}
+
+.dd__char-name {
+    width: 7rem;
+}
+
+.dd__lower-block {
+    display: flex;
+    flex-direction: row;
+    height: 11rem;
+}
+
+.dd__characteristcs {
+    width: 45rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 0 .5rem rgb(197, 197, 197);
+    padding-left: 2rem;
+    margin-right: 1.5rem;
+}
+
+.dd__buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.dd__button {
+    height: 4.75rem;
+    width: 4rem;
+    background-color: var(--white);
+    border: none;
+    border-radius: 1rem;
+    font-size: 2.5rem;
+    box-shadow: 0 0 .5rem rgb(197, 197, 197);
+}
+
+.dd__button:hover .dd__edit-button {
+    color: rgb(142, 134, 47);
+}
+
+.dd__button:hover .dd__delete-button {
+    color: var(--primary);
+}
+
+.dd__button:hover {
+    cursor: pointer;
+}
+
+.dd__button-size {
+    height: 1.7rem;
+    width: 1.7rem;
+}
+
+.dd__outer-edit {
+    margin-bottom: .75rem;
+}
+
+.dd__outer-delete {
+    margin-top: .75rem;
+}
+
+.hidden {
+    display: none;
+}
+
